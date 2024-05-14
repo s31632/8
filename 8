@@ -1,0 +1,78 @@
+public class Main {
+    public static void main(String[] args) {
+        Product product1 = new Product("Headphones", 100.0, "HD3", 0);
+
+        Product product2 = new Product("Smartphones", 650.0, "SP8", 10);
+
+        Product product3 = new Product("TV", 1000.0, "TV7", 20);
+
+        product2.setPrice(700.0);
+
+        product3.setNumberOfPieces(5);
+
+        displayProductInfo(product1);
+        displayProductInfo(product2);
+        displayProductInfo(product3);
+    }
+
+    public static void displayProductInfo(Product product) {
+        System.out.println("Name: " + product.getName());
+        System.out.println("Price: $" + product.getPrice());
+        System.out.println("Product Code: " + product.getProductCode());
+        System.out.println("Number of Pieces: " + product.getNumberOfPieces());
+        System.out.println("productCode");
+        System.out.println("numberOfPieces");
+    }
+}
+public class Product{
+    String name;
+    double price;
+    String productcode;
+    int numberOfpices;
+    Product(String name, double price, int stock){
+        this.name = name;
+        this.price = price;
+        this.productCode = productCode;
+        this.numberOfPieces = numberOfPieces;
+    }
+
+
+    public void setPrice(double newPrice) {
+        this.price = newPrice;
+    }
+
+
+    public void setNumberOfPieces(int newNumberOfPieces) {
+        if (newNumberOfPieces >= 0) {
+            this.numberOfPieces = newNumberOfPieces;
+        } else {
+            System.out.println("Number of pieces cannot be less than 0.");
+        }
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getProductCode() {
+        return productCode;
+    }
+
+    public int getNumberOfPieces() {
+        return numberOfPieces;
+    }
+}
+    public void setNumberOfpices(int numberOfpices) {
+    if (numberOfpices >=0){
+        this.numberOfpices =numberOfpices;
+    } else {
+        System.out.println("Number of pieces cannot be less than number 0");
+    }
+ }
+}
